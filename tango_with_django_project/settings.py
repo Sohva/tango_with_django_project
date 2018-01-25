@@ -16,11 +16,14 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #Diroctery of the templates
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 #Static dir
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
 #The media directory
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -130,4 +133,5 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_DIRS = [STATIC_DIR, ]
+
