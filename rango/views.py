@@ -60,10 +60,7 @@ def add_category(request):
             return index(request)
         else:
             # The supplied form contained errors
-            # just print them to the terminal.
-
-            print(form.errors)
-
-    return render(request, 'rango/add_category.html', {'form': form})
-
+            # just print them to the terminal.
+            print(form.errors)
+    return render(request, 'rango/add_category.html', {'form': form})
 
