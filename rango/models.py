@@ -1,6 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User
+
 
 max_length = 128
 # Create your models here.
@@ -42,4 +43,6 @@ class UserProfile(models.Model):
     
     def __str__(self):
         return self.user.username
+
+
 
