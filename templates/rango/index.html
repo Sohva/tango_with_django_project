@@ -8,10 +8,11 @@
 	{% else %}
 		hey there partner!
 	{% endif %}
-	{% if categories_likes %}
+		<br />Visits: {{ visits }}
+	{% if categories %}
 	<h2>Most liked categories</h2>
 	<ul>
-		{% for category in categories_likes %}
+		{% for category in categories %}
 		<li>
 		<a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
 		{% endfor %}
@@ -21,10 +22,10 @@
 		<strong>There are no categories present.</strong>
 	{% endif %}
 
-	{% if pages_views %}
+	{% if pages %}
 	<h2>Most viewed pages</h2>
 	<ul>
-		{% for page in pages_views %}
+		{% for page in pages %}
 		<li>
 		<a href={{page.url}}>{{ page.title }}</a>
 		{% endfor %}

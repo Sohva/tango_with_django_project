@@ -14,10 +14,10 @@ from datetime import datetime
 
 def index(request):
     request.session.set_test_cookie()
-    category_list_likes = Category.objects.order_by('-likes')[:5]
-    page_list_views = Page.objects.order_by('-views')[:5]
-    context_dict = {'categories_likes': category_list_likes,
-                    'pages_views': page_list_views}
+    categories = Category.objects.order_by('-likes')[:5]
+    pages = Page.objects.order_by('-views')[:5]
+    context_dict = {'categories': categories,
+                    'pages': pages}
     visitor_cookie_handler(request)
     context_dict['visits'] = request.session['visits']
     response = render(request, 'rango/index.html', context=context_dict)
