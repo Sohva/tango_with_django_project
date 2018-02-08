@@ -3,11 +3,11 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
-	Add a page to {{ category.name }}
+	Add page to {{ category.name }}
 {% endblock %}
 
 {% block body_block %}
-	<h1>Add a Page to {{category.name}}</h1>
+	<h1>Add Page to {{category.name}}</h1>
 	<div>
 		<form id="category_form" method="post" action="{% url 'add_page' category.slug %}">
 			{% csrf_token %}
