@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^rango/', include('rango.urls')),    
     #above maps any URLs starting rango rango/ tobe handled by the rango application
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
